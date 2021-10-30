@@ -1,0 +1,22 @@
+.body {
+  background: #add1af;
+  border-radius: 15px;
+  width: 130px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-img {
+  width: 60px;
+  height: 60px;
+}
+
+.button-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+

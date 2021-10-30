@@ -2,12 +2,13 @@ import { PieChart } from 'react-minimal-pie-chart';
 import styled from 'styled-components';
 
 const ChartWrapper = styled.div`
-  background: pink;
+  background: white;
   height: 180px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   svg {
     background: white;
     width: 210px;
@@ -17,6 +18,10 @@ const ChartWrapper = styled.div`
 
 const Ecostatus = () =>{
   return (
+    <>
+    <div className="eco-header">
+        <span>Eco Mode</span>
+    </div>
     <ChartWrapper>
       <PieChart
         data = {[
@@ -43,6 +48,7 @@ const Ecostatus = () =>{
         labelPosition={25} // 퍼센트 위치
       />
     </ChartWrapper>
+  </>
   )
 }
 
