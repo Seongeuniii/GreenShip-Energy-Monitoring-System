@@ -4,7 +4,7 @@ const Thermal = () => {
   return (
     <div className="body">
       <div className="menu-container">
-        <img className="button-img" src={thermal} alt="pressureimg"/><br/>
+        <img className="button-img" src={thermal} alt="pressureimg" style={{width: 40, height: 40}}/><br/>
         <span>180 J</span>
       </div>
       <div className="button-title">

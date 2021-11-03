@@ -1,10 +1,10 @@
 import styled from "styled-components";
-
+import engineer from '../img/engineer.png'
 const CommentWrapper = styled.div`
   background: white;
   border-radius: 15px;
   width: 230px;
-  height: 150px;
+  height: 145px;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -12,26 +12,40 @@ const CommentWrapper = styled.div`
   .comment-container {
     margin: 8px 8px 8px 8px;
   }
+
+  .comment-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-bottom: solid rgb(201, 200, 200) 1px;
+    img {
+      width: 33px;
+      height: 28px;
+      margin-right: 5px;
+    }
+    .nickname {
+      margin-top: 8px;
+    }
+
+  }
+  .comment-content {
+    font-size: 12px;
+  }
 `
 
-const Engineer = () => {
-
+const Engineer = ({comment}) => {
 
   return (
     <CommentWrapper>
       <div className="comment-container">
         <div className="comment-header">
-          <span className="nickname">Chief Engineer</span>
+          <img src={engineer} alt='engineer'/>
+          <div className="nickname"><span >{comment.nickname}</span></div>
         </div>
         <div className="comment-content" >
-          This HTML file is a template.
-          If you open it directly in the browser, you will see an empty page.
-
-          You can add webfonts, meta tags, or analytics to this file.
-          The build step will place the bundled scripts into the tag.
-
-          To begin the development, run `npm start` or `yarn start`.
-          To create a production bundle, use `npm run build` or `yarn build`.
+          {comment.content}
         </div>
       </div>
     </CommentWrapper>

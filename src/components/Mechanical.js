@@ -5,7 +5,7 @@ const Mechanical = () => {
   return (
     <div className="body">
       <div className="menu-container">
-        <img className="button-img" src={mechanical} alt="pressureimg"/><br/>
+        <img className="button-img" src={mechanical} alt="pressureimg" style={{width: 40, height: 40}}/><br/>
         <span>1780 kcal</span>
       </div>
       <div className="button-title">

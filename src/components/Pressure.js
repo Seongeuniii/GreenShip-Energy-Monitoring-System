@@ -5,7 +5,7 @@ const Pressure = () => {
   return (
     <div className="body">
       <div className="menu-container">
-        <img className="button-img" src={pressure} alt="pressureimg"/><br/>
+        <img className="button-img" src={pressure} alt="pressureimg" style={{width: 40, height: 40}}/><br/>
         <span>60 Pa</span>
       </div>
       <div className="button-title">
