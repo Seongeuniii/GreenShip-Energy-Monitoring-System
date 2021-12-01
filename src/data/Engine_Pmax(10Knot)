@@ -1,0 +1,106 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+df1 = pd.read_excel("C:/Python/10knot/1Cylinder.xlsx", sheet_name="No.1Cylinder")
+df2 = pd.read_excel("C:/Python/10knot/2Cylinder.xlsx", sheet_name="No.2Cylinder")
+df3 = pd.read_excel("C:/Python/10knot/3Cylinder.xlsx", sheet_name="No.3Cylinder")
+df4 = pd.read_excel("C:/Python/10knot/4Cylinder.xlsx", sheet_name="No.4Cylinder")
+df5 = pd.read_excel("C:/Python/10knot/5Cylinder.xlsx", sheet_name="No.5Cylinder")
+df6 = pd.read_excel("C:/Python/10knot/6Cylinder.xlsx", sheet_name="No.6Cylinder")
+
+Crankangle1 = []
+Crankangle2 = []
+Crankangle3 = []
+Crankangle4 = []
+Crankangle5 = []
+Crankangle6 = []
+Crankangle7 = []
+Crankangle8 = []
+Crankangle9 = []
+Crankangle10 = []
+Crankangle11 = []
+Crankangle12 = []
+
+Pmax1 = []
+Pmax2 = []
+Pmax3 = [] 
+Pmax4 = []
+Pmax5 = []
+Pmax6 = []
+Pmax7 = []
+Pmax8 = []
+Pmax9 = []
+Pmax10 = []
+Pmax11 = []
+Pmax12 = []
+
+fig, ax1 = plt.subplots()
+i = 0
+for i in range(len(df1.iloc[:360])) :
+    if len(df1.iloc[:360]) == 360 :  
+        Crankangle1.append(df1.iloc[i+2, 0]) 
+        Pmax1.append(df1.iloc[i+2, 4])
+        Crankangle2.append(df2.iloc[i+2, 0]) 
+        Pmax2.append(df2.iloc[i+2, 4])
+        Crankangle3.append(df3.iloc[i+2, 0]) 
+        Pmax3.append(df3.iloc[i+2, 4])
+        Crankangle4.append(df4.iloc[i+2, 0]) 
+        Pmax4.append(df4.iloc[i+2, 4])
+        Crankangle5.append(df5.iloc[i+2, 0]) 
+        Pmax5.append(df5.iloc[i+2, 4])
+        Crankangle6.append(df6.iloc[i+2, 0]) 
+        Pmax6.append(df6.iloc[i+2, 4])
+        plt.plot(Crankangle1,Pmax1,'b.--')
+        plt.plot(Crankangle2,Pmax2,'g.--')
+        plt.plot(Crankangle3,Pmax3,'r.--')
+        plt.plot(Crankangle4,Pmax4,'c.--')
+        plt.plot(Crankangle5,Pmax5,'m.--')
+        plt.plot(Crankangle6,Pmax6,'y.--')
+    i = i + 1
+
+ax1.plot(Crankangle1,Pmax1,'b.--',label='No.1')
+ax1.plot(Crankangle2,Pmax2,'g.--',label='No.2')
+ax1.plot(Crankangle3,Pmax3,'r.--',label='No.3')
+ax1.plot(Crankangle4,Pmax4,'c.--',label='No.4')
+ax1.plot(Crankangle5,Pmax5,'m.--',label='No.5')
+ax1.plot(Crankangle6,Pmax6,'y.--',label='No.6')
+
+ax1.set(xlabel='CA', ylabel='Pmax(Bar)',title='No.1-No.6 Cylinder(10Knot)')
+
+plt.legend(loc='lower right', bbox_to_anchor=(1,0.07))
+ax1.grid()
+
+fig2, ax = plt.subplots(subplot_kw=dict(projection='polar'))
+
+rad = 57.295779513082320876798154814
+i = 0
+for i in range(len(df1.iloc[:360])) :
+    if len(df1.iloc[:360]) == 360 :  
+        Crankangle7.append((df1.iloc[i+2, 0]/rad))
+        Pmax7.append(df1.iloc[i+2, 4])
+        Crankangle8.append((df2.iloc[i+2, 0]/rad))
+        Pmax8.append(df2.iloc[i+2, 4])
+        Crankangle9.append((df3.iloc[i+2, 0]/rad))
+        Pmax9.append(df3.iloc[i+2, 4])
+        Crankangle10.append((df4.iloc[i+2, 0]/rad))
+        Pmax10.append(df4.iloc[i+2, 4])
+        Crankangle11.append((df5.iloc[i+2, 0]/rad))
+        Pmax11.append(df5.iloc[i+2, 4])
+        Crankangle12.append((df6.iloc[i+2, 0]/rad))
+        Pmax12.append(df6.iloc[i+2, 4])
+        i = i + 1
+
+#plt.axes(polar=True)
+plt.plot(Crankangle7,Pmax7,'k--',label='No.1')
+plt.plot(Crankangle8,Pmax8,'g--',label='No.2')
+plt.plot(Crankangle9,Pmax9,'r--',label='No.3')
+plt.plot(Crankangle10,Pmax10,'c--',label='No.4')
+plt.plot(Crankangle11,Pmax11,'m--',label='No.5')
+plt.plot(Crankangle12,Pmax12,'y--',label='No.6')
+
+plt.legend(loc='lower left', bbox_to_anchor=(1,0))
+ax.set_title("No.1-No.6 Cylinder(10Knot)", va='bottom')
+fig.savefig("test1.png")
+fig2.savefig("test11.png")
+plt.show()
