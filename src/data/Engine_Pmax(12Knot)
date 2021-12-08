@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-df1 = pd.read_excel("C:/Python/12knot/1Cylinder.xlsx", sheet_name="No.1Cylinder")
-df2 = pd.read_excel("C:/Python/12knot/2Cylinder.xlsx", sheet_name="No.2Cylinder")
-df3 = pd.read_excel("C:/Python/12knot/3Cylinder.xlsx", sheet_name="No.3Cylinder")
-df4 = pd.read_excel("C:/Python/12knot/4Cylinder.xlsx", sheet_name="No.4Cylinder")
-df5 = pd.read_excel("C:/Python/12knot/5Cylinder.xlsx", sheet_name="No.5Cylinder")
-df6 = pd.read_excel("C:/Python/12knot/6Cylinder.xlsx", sheet_name="No.6Cylinder")
+df1 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/1Cylinder.xlsx", sheet_name="No.1Cylinder")
+df2 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/2Cylinder.xlsx", sheet_name="No.2Cylinder")
+df3 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/3Cylinder.xlsx", sheet_name="No.3Cylinder")
+df4 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/4Cylinder.xlsx", sheet_name="No.4Cylinder")
+df5 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/5Cylinder.xlsx", sheet_name="No.5Cylinder")
+df6 = pd.read_excel("C:/Users/konge/Desktop/캡스톤/Appnergy/greenship energy monitoring/src/data/12knot/6Cylinder.xlsx", sheet_name="No.6Cylinder")
 
 Crankangle1 = []
 Crankangle2 = []

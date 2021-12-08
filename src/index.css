@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Passion+One&family=Russo+One&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#f1f1f1;
-  font-family: 'Rubik', sans-serif;
+  /* background-color:#f1f1f1; */
+  background: linear-gradient(#fddb92, #deecdd);
+  font-family: 'Russo One', sans-serif;
 }
 
 /* body #root {
